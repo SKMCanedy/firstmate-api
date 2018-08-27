@@ -6,7 +6,6 @@ const passport = require("passport");
 
 const {Board} = require("./models");
 
-
 const router = express.Router();
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
