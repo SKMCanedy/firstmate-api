@@ -6,6 +6,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require('cors')
+const {CLIENT_ORIGIN} = require('./config');
 
 const app = express();
 const router = express.Router();
@@ -24,7 +25,11 @@ passport.use(localStrategy);
 passport.use(jwtStrategy);
 
 app.use(jsonParser);
-app.use(cors());
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN
+  })
+);
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);

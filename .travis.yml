@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+services:
+- mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: r7/Li0WJ59UGnla8EEa7q6jwE6goQLGmySy3PimJ3zHyAsaGmdD/+RbHe7zGegfc5Pkg4/ppBTFXENOge3mj4ks+ldEJLYMMYT1FNKm2U5YqWKC59cN5St24rFdMsxjudpC4zUS1HovYaCvdS2NZoKqggj0a1dtmlZdf4VdecpWYd4pW8DANvok9Pr8Rq2U2ofLnbxa0b7aSZGAiTdbOYdFc7HLdhJg8T15LoOKNeaMTvzwsDsv2C9pM2eYC+cbjd5Ifu22U0cR+fTwgB0ca6A7AcpdaMyMf5ZHhQ2o13P7z155hUrGz2H5xK6B5Qo9K2Z1B3yioMdbf3Gm4/cen29GB460KWJTE/VoZFeysIGi9Q7QxxuWDqBj8f2pxp3PoqnVZ6hx3LZOY5DrqQewnHJEgq6XxvCzEwu5N3TL9J9Da7gxrSNBOFTvwnwxiYHGtyR6VBLaJCT5LiWQMP2a/Y+OXMLZ/RiNN4XNPcKn6D2MRle0TnP0OHcrONtRi+twLqgQer2soqWv31aE8HHxUjeJNjLcysNP02rydsv2xd8Iq4HZYOO8iVqCr8DLUlRg2YldoTIHnK8uhuTF2T83FPC4ku8rv7NMlOSFyJCvS/f3caAjwDIX5YCC3sAPAJ5n/SpaZ8lk+VCuop4KXW++ttkLmiZridSSJtznAVyuNjOI=
+  app: thawing-earth-54058
+  on:
+    repo: SKMCanedy/firstmate-api
