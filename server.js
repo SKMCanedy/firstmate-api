@@ -5,6 +5,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require('cors')
 
 const app = express();
 const router = express.Router();
@@ -17,16 +18,19 @@ const { router: usersRouter } = require("./users");
 const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
 const { router: staffRouter } = require("./staff");
 const { router: processRouter } = require("./processes");
+const { router: boardRouter } = require("./board");
 
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
 app.use(jsonParser);
+app.use(cors());
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);
 app.use("/api/staff/", staffRouter);
 app.use("/api/processes/", processRouter);
+app.use("/api/board/", boardRouter);
 
 app.use(express.static("public"), function (req,res){
     res.sendStatus(200);
