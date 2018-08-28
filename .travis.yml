@@ -4,7 +4,8 @@ services:
 - mongodb
 deploy:
   provider: heroku
-  api_key: 3fb96f91-5905-45e3-bd21-d6d65b170243
+  api_key:
+    secure: 76TXtlyx9Qa8kZpjA2T8rXVoL0tNtHTQ/cRBW0OIqncE5z0oqm/29zP0D/2NsxQdfCr5qSoA2nMpU14w0FCgIU6SzH5mFWJZ/UsEVR0e7yMAxlGVeeAfqAuYgnbaxBJ5AIcXtHW9outApInPYKzKi4HuI0XsNxQPcQT54nAS5robcVfcv6OsCed9fD6LJ4gzUyRTj/5dTnbIBbztPOTnyT9VEiCcQK6cwwJwdil0s+bCW5HKRuEuuXXepCtMPFW55+1EXNhGFth4cqU3mFwrE5TMFhJ0jR3bfULs1SQUsPdsEoVeryoRmrqQ/8RqCAFPfkAOejP7fK1o4piuKEFLdbjIc1NMRXURRUc3n0Y7021pVBQWX/xLzILO2SNaFuhRoo23a/7M8fkwoJ7tc9z5eAylneiD9Eks/xx2YZr/Pv2JrscdHN0lFhlfk5RdTxKR2DY99lmCSwMSdsBIhvS0fPAYokiuu518vEk3HMS9QzC9HV4vCIp2RfgIjfDpM5CWh8uqVtwxCzeB21y2gLzyS0QZRc4680kOEZFNp/A/NuZsY/o0NGU09/11HN+P8zGzMEaFifKr9XuWjGoQXhafbE5zn99GQJ7CbOrkHQQtuuXPoEdgvppsNNPPgRatNYFNk6jKgmmXja6Cpd8jeJwjBeep7ecm+UW8Gz/32RvNCC4=
   app: firstmate-backend-api
   on:
     repo: SKMCanedy/firstmate-api
