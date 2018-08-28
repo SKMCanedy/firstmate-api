@@ -6,14 +6,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require('cors')
-const {CLIENT_ORIGIN} = require('./config');
 
 const app = express();
 const router = express.Router();
 const passport = require("passport");
 const jsonParser = bodyParser.json();
 
-const { PORT, DATABASE_URL, TEST_DATABASE_URL } = require("./config");
+const { PORT, DATABASE_URL, TEST_DATABASE_URL, CLIENT_ORIGIN } = require("./config");
 
 const { router: usersRouter } = require("./users");
 const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
@@ -23,7 +22,11 @@ passport.use(localStrategy);
 passport.use(jwtStrategy);
 
 app.use(jsonParser);
-app.use(cors());
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN
+  })
+);
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);
